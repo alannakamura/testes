@@ -26,9 +26,9 @@ void vec_add(const float *a, const float *b, float *c, int n){
 vec_add = mod.get_function("vec_add")
 
 # ---------- 4) Aloca buffers com PyCUDA ----------
-n = 10
+n = 5
 a_h = np.arange(n, dtype=np.float32)
-b_h = np.arange(n, dtype=np.float32)
+b_h = np.arange(1, 1+n, dtype=np.float32)
 c_h = np.empty_like(a_h)
 
 a_d = drv.mem_alloc(a_h.nbytes)
